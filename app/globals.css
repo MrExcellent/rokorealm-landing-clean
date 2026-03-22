@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#020617] text-[#e5e7eb] font-sans;
+}
+
+.roko-gradient {
+  background: radial-gradient(circle at top, #22d3ee33, transparent 60%),
+    radial-gradient(circle at bottom, #a855f733, transparent 60%),
+    #020617;
+}
+
+.roko-border {
+  @apply border border-slate-800/80;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
   margin: 0;
   padding: 0;
