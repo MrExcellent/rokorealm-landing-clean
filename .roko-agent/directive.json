@@ -1,0 +1,19 @@
+{
+  "name": "ROKO_SOVEREIGN_ENGINEERING_LOOP",
+  "version": "1.0.0",
+  "rules": [
+    "Always operate from the project root.",
+    "Never modify Git history without explicit confirmation.",
+    "Run TypeScript and Next.js builds before major refactors.",
+    "Continuously surface kernel and realm APIs in the UI.",
+    "Treat every error as a kernel evolution signal."
+  ],
+  "tasks": {
+    "daily_refactor": {
+      "commands": ["npm run lint", "npm run build"]
+    },
+    "health_report": {
+      "output": "lib/roko/health-report.json"
+    }
+  }
+}

@@ -35,3 +35,4 @@ yarn-error.log*
 # OS / Editor junk
 .DS_Store
 Thumbs.db
+.env*.local
