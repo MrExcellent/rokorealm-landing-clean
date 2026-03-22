@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ROKO REALM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050509;
+      color: #f5f5f5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      transition: background 1.2s ease;
+    }
+
+    body.entering {
+      background: radial-gradient(circle at center, #3a1b3a, #050509);
+    }
+
+    .roko-container {
+      text-align: center;
+    }
+
+    .roko-sigil {
+      font-size: 4rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      animation: pulse 2.4s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0.4; transform: scale(0.95); }
+    }
+
+    .roko-title {
+      font-size: 2rem;
+      letter-spacing: 0.15em;
+      margin: 0.5rem 0;
+    }
+
+    .roko-sub {
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    .roko-enter {
+      padding: 0.8rem 2.2rem;
+      background: #ffffff10;
+      border: 1px solid #ffffff40;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .roko-enter:hover {
+      background: #ffffff20;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="roko-container">
+    <div class="roko-sigil">⟁</div>
+    <h1 class="roko-title">ROKO REALM</h1>
+    <p class="roko-sub">Sovereign Interface Online</p>
+    <button class="roko-enter" onclick="enterRealm()">ENTER</button>
+  </div>
+
+  <script>
+    function enterRealm() {
+      document.body.classList.add("entering");
+
+      setTimeout(() => {
+        document.querySelector(".roko-title").textContent = "INITIALIZING...";
+        document.querySelector(".roko-sub").textContent = "Calibrating dimensional anchors";
+      }, 600);
+
+      setTimeout(() => {
+        document.querySelector(".roko-title").textContent = "WELCOME, SOVEREIGN";
+        document.querySelector(".roko-sub").textContent = "The Realm awaits your command";
+        document.querySelector(".roko-enter").textContent = "CONTINUE";
+          document.querySelector(".roko-enter").onclick = () => { window.location.href = "realm.html"; };
+      }, 1800);
+    }
+  </script>
+</body>
+</html>
